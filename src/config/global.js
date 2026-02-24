@@ -1,17 +1,26 @@
 export default {
   global: {
-    Name: 'Nombre del recurso educativo',
-    Description: 'Descripción del RED',
-    imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.svg'),
-    fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
+    componenteFormativo: 'Estructura de documentos',
+    descripcionCurso:
+      'En el presente componente formativo, se indica la importancia de las categorías gramaticales y signos de puntuación, para llegar a una correcta composición del párrafo y terminar con el estudio del documento y la gestión documental.',
+    imagenBannerPrincipal: require('@/assets/curso/temas/portada/portada.png'),
+    fondoBannerPrincipal: require('@/assets/curso/temas/portada/img-fnd.png'),
     imagenesDecorativasBanner: [
       {
         clases: ['banner-principal-decorativo-1', 'd-none', 'd-lg-block'],
-        imagen: require('@/assets/curso/portada/banner-principal-decorativo-1.svg'),
+        imagen: require('@/assets/curso/temas/portada/img-f1-.svg'),
       },
       {
         clases: ['banner-principal-decorativo-2'],
-        imagen: require('@/assets/curso/portada/banner-principal-decorativo-2.svg'),
+        imagen: require('@/assets/curso/temas/portada/icon-3.png'),
+      },
+      {
+        clases: ['banner-principal-decorativo-3'],
+        imagen: require('@/assets/curso/temas/portada/icon-1.png'),
+      },
+      {
+        clases: ['banner-principal-decorativo-4'],
+        imagen: require('@/assets/curso/temas/portada/icon-2.png'),
       },
     ],
   },
@@ -24,34 +33,44 @@ export default {
       },
       {
         nombreRuta: 'introduccion',
-        icono: 'fas fa-info-circle',
+        icono: 'fas fa-info',
         titulo: 'Introducción',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Tema 1',
+        titulo: 'Categorías gramaticales',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '1.1',
-            titulo: 'Subtema 1',
+            titulo: 'Clases de oraciones',
             hash: 't_1_1',
+          },
+          {
+            numero: '1.2',
+            titulo: 'El párrafo',
+            hash: 't_1_2',
           },
         ],
       },
-
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Tema 2',
+        titulo: 'Signos de puntuación y reglas ortográficas',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Tema 3',
+        titulo: 'Gestión documental',
+        desarrolloContenidos: true,
+      },
+      {
+        nombreRuta: 'tema4',
+        numero: '4',
+        titulo: 'Documento administrativo',
         desarrolloContenidos: true,
       },
     ],
@@ -86,7 +105,7 @@ export default {
       {
         icono: 'fas fa-file-pdf',
         titulo: 'Descargar PDF',
-        download: 'downloads/dist.pdf',
+        download: 'downloads/122153_CF09_DU.zip',
       },
       {
         icono: 'fas fa-download',
@@ -100,92 +119,185 @@ export default {
       },
     ],
   },
-  complementario: [
+  referencias: [
     {
-      tema: '',
-      referencia: '',
-      tipo: 'Sitio web',
-      link: '',
+      referencia:
+        'Archivo General de la Nación. (s.f.). <em>Políticas de archivos.</em> Archivo General de la Nación. ',
+      link:
+        'https://www.archivogeneral.gov.co/politica/politicas#:~:text=La%20pol%C3%ADtica%20de%20gesti%C3%B3n%20documental,conjunto%20de%20est%C3%A1ndares%20para%20la',
+    },
+    {
+      referencia:
+        'Ucha, F. (2008).<em> Definición de Documento.</em> Definición ABC.',
+      link: 'https://www.definicionabc.com/general/documento.php',
     },
   ],
   glosario: [
     {
-      termino: 'Término',
-      significado: 'Definición',
+      termino: 'Característica',
+      significado:
+        'cualidad o circunstancia que es propia o peculiar de una persona o una cosa y por la cual se define de otras de su misma especie.',
+    },
+    {
+      termino: 'Clases',
+      significado:
+        'grupo de elementos de un conjunto que tiene características comunes.',
+    },
+    {
+      termino: 'Conjunción',
+      significado:
+        'palabra que se utiliza para unir dos o más partes de una oración o dos o más oraciones.',
+    },
+    {
+      termino: 'Documento',
+      significado:
+        'un documento es la constancia escrita, ya sea de forma física o virtual, que plasma las características de un hecho o circunstancia.',
+    },
+    {
+      termino: 'Estructura',
+      significado:
+        'modo de estar organizadas u ordenadas las partes de un todo.',
+    },
+    {
+      termino: 'Gramática',
+      significado:
+        'parte de la lingüística que estudia la estructura de las palabras y sus accidentes, así como la manera en que se combinan para formar oraciones.',
+    },
+    {
+      termino: 'Párrafo',
+      significado:
+        'es una unidad comunicativa formada por un conjunto de oraciones secuenciales que trata un mismo tema.',
+    },
+
+    {
+      termino: 'Pronombre',
+      significado:
+        'palabra que se emplea para designar una cosa sin emplear su nombre, común o propio. ',
+    },
+    {
+      termino: 'Oración',
+      significado:
+        'es una unidad sintáctica con sentido completo, que está conformada por predicado y sujeto este último puede ser expreso o implícito.',
+    },
+    {
+      termino: 'Ortografía',
+      significado:
+        'forma correcta de escribir las palabras y de utilizar los signos auxiliares de una lengua, respetando sus reglas.',
     },
   ],
-  referencias: [
+  complementario: [
     {
-      referencia: '',
-      link: '',
+      tema: 'Signos de puntuación',
+      referencia:
+        'Aula365 - Los Creadores. (2016). <i>Cómo Usar los Signos de Puntuación - Videos educativos Aula365</i> (video). YouTube.',
+      tipo: 'Video',
+      link: 'https://youtu.be/LtP_UkSj5ho',
+    },
+    {
+      tema: 'Gestión documental',
+      referencia:
+        'Pérez, V. (2020). <i>Tipos de documentos</i> (video). YouTube. ',
+      tipo: 'Video',
+      link: 'https://youtu.be/VAvULe9Do60',
+    },
+    {
+      tema: 'Documento administrativo',
+      referencia:
+        'Estudiando con Jackeline. (2020). <i>Documentos Administrativos Concepto y Clases</i> (Vídeo). YouTube.',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=lZ-P1zYjq7U',
     },
   ],
-  creditos: [
-    {
-      titulo: 'ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable del ecosistema',
-          centro: 'Dirección General',
-        },
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable de línea de producción',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'CONTENIDO INSTRUCCIONAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Nombre del rol',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Diseñador de contenidos',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Desarrollador <i>full stack</i>',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Animador y productor audiovisual',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'VALIDACIÓN RECURSO EDUCATIVO DIGITAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Validador y vinculador de recursos educativos digitales',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Evaluador de contenidos inclusivos y accesibles',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-  ],
-  creditosAdicionales: {
-    imagenes:
-      'Fotografías y vectores tomados de <a href="https://www.freepik.es/" target="_blank">www.freepik.es</a>, <a href="https://www.shutterstock.com/" target="_blank">www.shutterstock.com</a>, <a href="https://unsplash.com/" target="_blank">unsplash.com </a>y <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>',
-    creativeCommons:
-      'Licencia creative commons CC BY-NC-SA<br><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">ver licencia</a>',
+  creditos: {
+    liderEquipo: [
+      {
+        nombre: 'Maria Camila Garcia Santamaria',
+        cargo: 'Líder del equipo',
+        centro: 'Dirección General',
+      },
+    ],
+    contenidoInstruccional: [
+      {
+        nombre: 'Rafael Neftalí Lizcano Reyes',
+        cargo: 'Asesor metodológico y pedagógico',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura Regional Santander',
+      },
+    ],
+    desarrolloProducto: [
+      {
+        nombre: 'Francisco José Lizcano Reyes',
+        cargo: 'Responsable del equipo',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura Regional Santander',
+      },
+      {
+        nombre: 'Leyson Fabian Castaño Perez',
+        cargo: 'Soporte organizacional',
+        centro: 'Centro de Comercio y Servicios Regional Tolima',
+      },
+      {
+        nombre: ['Nombre 1', 'Nombre 2'],
+        cargo: 'Diseño web',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Desarrollo Front-End',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Producción audiovisual',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Validación de diseño y contenido',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura Regional Santander',
+      },
+    ],
+    gestoresRepositorio: [
+      {
+        nombre: 'Álvaro Andrés Angarita Ramirez',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios Regional Tolima',
+      },
+      {
+        nombre: 'Daniel Felipe Varón Molina',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios Regional Tolima',
+      },
+      {
+        nombre: 'Milady Tatiana Villamil Castellanos',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios Regional Tolima',
+      },
+    ],
   },
+  // creditosInicio: [
+  //   {
+  //     titulo: 'En alianza',
+  //     contenido: [
+  //       require('@/assets/template/logo-sena-naranja.svg'),
+  //       require('@/assets/template/mintic.jpg'),
+  //       require('@/assets/template/minsalud.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'En compañía',
+  //     contenido: [
+  //       require('@/assets/template/presidencia.jpg'),
+  //       require('@/assets/template/ecopetrol.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'Una iniciativa',
+  //     contenido: [require('@/assets/template/santander.jpg')],
+  //   },
+  // ],
 }

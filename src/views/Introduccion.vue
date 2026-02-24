@@ -1,14 +1,29 @@
 <template lang="pug">
-.curso-main-container.introduccion
-  BannerInterno
-  .container.tarjeta.tarjeta--blanca.p-4.p-md-5.mb-5
-    .titulo-principal.color-acento-contenido(data-aos="flip-up")
-      .titulo-principal__numero
-        span
-          i.fas.fa-info
-      h1 Introducción
+  .curso-main-container.introduccion
+    BannerInterno
+    .container.tarjeta.tarjeta--blanca.p-4.p-md-5.mb-5
+        
+      .titulo-principal.color-acento-contenido
+        .titulo-principal__numero
+          span 
+            i.fas.fa-info
+        h1 Introducción
+      .row.justify-content-center.align-items-center
+        .col-lg-10
+          .bloque-texto-g.color-primario.p-3.p-sm-4.p-md-5.mb-4
+            .bloque-texto-g__img(
+              :style="{'background-image': `url(${require('@/assets/curso/temas/portada/img-intro.png')})`}"
+            )
+            .bloque-texto-g__texto.p-4
+              p Apreciado aprendiz, bienvenido a este componente formativo, donde se estudiarán las categorías gramaticales, cómo crear una oración, el párrafo, signos de puntuación, para finalizar con la definición de documento y cómo es su gestión documental.
 
-</template>
+      p.mb-4 En el siguiente video conocerá, de forma general, la temática que se estudiará a lo largo del componente formativo.
+
+      figure
+        .video
+          iframe(width="560" height="315" src="https://www.youtube.com/embed/oTMESNhmR4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+  
+  </template>
 
 <script>
 export default {
@@ -16,14 +31,6 @@ export default {
   data: () => ({
     // variables de vue
   }),
-  mounted() {
-    this.$nextTick(() => {
-      this.$aosRefresh()
-    })
-  },
-  updated() {
-    this.$aosRefresh()
-  },
 }
 </script>
 
